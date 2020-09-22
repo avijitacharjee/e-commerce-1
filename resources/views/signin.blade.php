@@ -3,7 +3,8 @@
 @section('content')
     <!-- Form -->
     <div class="content">
-        <form action="{{URL::to('signin')}}">
+        <form action="{{URL::to('signin')}}" method="POST">
+            @csrf
             <div class="form-group">
                 <label for="email">Email address:</label>
                 <input type="email" class="form-control" placeholder="Enter email" id="email">
