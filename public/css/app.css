@@ -36,3 +36,8 @@ body {
     background-color: #E0E0E0;
     margin-top: 20px;
 }
+
+.err {
+    color: red;
+    margin: 20px;
+}
