@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\UserController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -21,3 +22,8 @@ Route::get('sign-up', function () {
     return view('signup');
 });
 Route::post('sign-up',[AuthController::class, 'signUp']);
+Route::post('sign-in',[AuthController::class, 'signIn']);
+Route::get('users',[UserController::class,'users']);
+Route::get('user-update/{id}',[UserController::class,'userUpdate']);
+Route::post('user-update/{id}',[UserController::class,'userUpdatePost']);
+Route::get('user-delete/{id}',[UserController::class,'userDelete']);

@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class AuthController extends Controller
 {
@@ -27,6 +29,13 @@ class AuthController extends Controller
             'email' => 'required',
             'password' => 'required'
         ]);
-        
+        $user = DB::table('users')->where('email', $request->email)->first();
+        if($user!=null){
+            if($user->password==$request->password){
+                return "Logged In";
+            }else{
+                return "Failed";
+            }
+        }
     }
 }
