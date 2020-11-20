@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\ProductController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -27,3 +28,5 @@ Route::get('users',[UserController::class,'users']);
 Route::get('user-update/{id}',[UserController::class,'userUpdate']);
 Route::post('user-update/{id}',[UserController::class,'userUpdatePost']);
 Route::get('user-delete/{id}',[UserController::class,'userDelete']);
+
+Route::get('products',[ProductController::class,'products']);
