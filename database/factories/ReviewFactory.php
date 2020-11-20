@@ -22,7 +22,7 @@ class ReviewFactory extends Factory
     public function definition()
     {
         return [
-            //
+            
         ];
     }
 }
