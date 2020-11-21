@@ -52,4 +52,7 @@ class ProductController extends Controller
         }
         return $names;
     }
+    function update(Request $request,$id){
+        return 'updated';
+    }
 }
