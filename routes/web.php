@@ -30,3 +30,5 @@ Route::post('user-update/{id}',[UserController::class,'userUpdatePost']);
 Route::get('user-delete/{id}',[UserController::class,'userDelete']);
 
 Route::get('products',[ProductController::class,'products']);
+Route::get('products/insert',[ProductController::class,'insert_get']);
+Route::post('products/insert',[ProductController::class,'insert']);
